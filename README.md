@@ -1,42 +1,61 @@
-# Caporale Advogados — landing page
+# Caporale Advogados — Landing Page
 
-Landing page institucional em React + Vite, com tema claro/escuro e formulário de contato via EmailJS.
+Landing page institucional desenvolvida para o escritório **Caporale Advogados**, localizado em Uberlândia/MG.
 
-## Rodar o projeto
+O projeto apresenta as áreas de atuação, o método de trabalho e a sócia fundadora, conduzindo o visitante de forma clara e intuitiva ao contato por meio de formulário ou WhatsApp.
 
-```bash
-npm install
-npm run dev      # ambiente de desenvolvimento
-npm run build    # gera a pasta dist/ para publicação
+---
+
+## ✨ Destaques
+
+- **Tema claro e escuro:** detecção automática da preferência do sistema operacional, com persistência da escolha do usuário no navegador.
+- **Formulário de contato funcional:** envio direto de mensagens por e-mail utilizando um template HTML próprio via EmailJS, dispensando a necessidade de back-end.
+- **Design responsivo (Mobile-First):** layout adaptado para diferentes tamanhos de tela, incluindo menu mobile acessível.
+- **Identidade visual editorial:** combinação de tipografia serifada nos títulos, linhas finas e uso estratégico do laranja exclusivamente como cor de acento.
+- **Acessibilidade:** suporte à navegação por teclado, indicadores de foco visível, rótulos associados aos campos de formulário e respeito à preferência `prefers-reduced-motion`.
+- **SEO técnico:** configuração de metatags, Open Graph, dados estruturados (`LegalService`), `sitemap.xml` e `robots.txt`.
+- **Microinterações:** animações discretas de entrada sincronizadas com a rolagem da página.
+
+---
+
+## 🛠️ Tecnologias
+
+| Tecnologia | Utilização |
+|---|---|
+| React 18 | Biblioteca para construção da interface |
+| Vite 5 | Ferramenta de build e desenvolvimento |
+| CSS Modules | Estilização modular dos componentes |
+| Variáveis CSS | Gerenciamento de cores e identidade visual |
+| JavaScript (ES2020+) | Lógica e interatividade |
+| EmailJS | Envio de mensagens por e-mail |
+
+---
+
+## 📌 Seções da página
+
+- Início
+- Áreas de atuação
+- Outras áreas
+- Método Caporale
+- O escritório
+- Dúvidas frequentes
+- Contato
+
+---
+
+## 📁 Estrutura do projeto
+
+```text
+src/
+├── components/   # Seções da página, cada uma com seu próprio CSS Module
+├── dados/        # Textos e informações de contato, desacoplados do layout
+├── hooks/        # Gerenciamento de tema claro/escuro e animações de entrada
+└── styles/       # Variáveis de cor, tipografia e estilos globais
 ```
 
-## Configurar o EmailJS
+---
 
-1. Crie a conta em https://dashboard.emailjs.com e adicione um **Email Service** (Outlook, Gmail etc.).
-2. Crie um **Email Template**, abra o editor de código e cole o conteúdo de `email-template/contato.html`.
-   - Subject: `Novo contato pelo site — {{nome}}`
-   - To Email: e-mail que receberá as mensagens
-   - Reply To: `{{email}}`
-3. Copie `.env.example` para `.env` e preencha:
+🔗 **Acesse o projeto:** 
+## 👨‍💻 Autor
 
-```
-VITE_EMAILJS_SERVICE_ID=service_xxxxxxx
-VITE_EMAILJS_TEMPLATE_ID=template_xxxxxxx
-VITE_EMAILJS_PUBLIC_KEY=xxxxxxxxxxxxxxxx
-```
-
-4. Reinicie o `npm run dev`. No Netlify, cadastre as mesmas três variáveis em
-   *Site settings → Environment variables*.
-
-Recomendado no painel do EmailJS: em *Account → Security*, restrinja o envio ao domínio do site.
-
-Variáveis enviadas ao template: `nome`, `email`, `telefone`, `telefone_numeros`, `assunto`, `mensagem`, `data`.
-
-## Onde editar
-
-| O quê | Arquivo |
-| --- | --- |
-| Telefones, endereço, horário, redes | `src/dados/escritorio.js` |
-| Textos das seções, áreas, FAQ | `src/dados/conteudo.js` |
-| Cores e tipografia (temas) | `src/styles/global.css` |
-| Imagens e logotipo | `public/img/` |
+Desenvolvido por **Mateus Rezende**.
