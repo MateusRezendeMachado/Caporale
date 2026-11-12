@@ -1,0 +1,131 @@
+.atuacao {
+  background: var(--fundo-principal);
+}
+
+.cabecalho {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: end;
+  gap: clamp(24px, 5vw, 72px);
+}
+
+.cabecalho :global(.textoSection) {
+  margin-top: 0;
+}
+
+.destaques {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 32px);
+  margin-top: clamp(40px, 6vw, 72px);
+}
+
+.destaque {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 4vw, 48px);
+  background: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra-card);
+  overflow: hidden;
+  transition: border-color var(--transicao), transform var(--transicao);
+}
+
+.destaque::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--laranja-vivo);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.destaque:hover {
+  border-color: var(--borda-forte);
+}
+
+.destaque:hover::before {
+  transform: scaleX(1);
+}
+
+.numero {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--laranja);
+}
+
+.destaque h3 {
+  margin-top: 14px;
+  font-size: clamp(1.625rem, 2.8vw, 2.125rem);
+  color: var(--azul);
+}
+
+.resumo {
+  margin-top: 16px;
+  color: var(--texto-secundario);
+}
+
+.itens {
+  margin-top: 28px;
+  border-top: 1px solid var(--borda);
+}
+
+.itens li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-block: 14px;
+  border-bottom: 1px solid var(--borda);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.itens svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--laranja);
+}
+
+.nota {
+  margin-top: 24px;
+  padding-left: 18px;
+  border-left: 2px solid var(--laranja-vivo);
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--texto-secundario);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 32px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--laranja);
+}
+
+.link svg {
+  transition: transform var(--transicao);
+}
+
+.link:hover svg {
+  transform: translateX(5px);
+}
+
+@media (max-width: 860px) {
+  .cabecalho,
+  .destaques {
+    grid-template-columns: 1fr;
+  }
+}

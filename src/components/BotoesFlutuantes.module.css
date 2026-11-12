@@ -1,0 +1,48 @@
+.whatsapp,
+.topo {
+  position: fixed;
+  bottom: clamp(16px, 3vw, 28px);
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: transform var(--transicao), opacity var(--transicao), visibility var(--transicao),
+    border-color var(--transicao), color var(--transicao);
+}
+
+.whatsapp {
+  right: clamp(16px, 3vw, 28px);
+  width: 58px;
+  height: 58px;
+  background: #1faa53;
+  color: #fff;
+  box-shadow: 0 14px 32px -10px rgba(0, 0, 0, 0.45);
+}
+
+.whatsapp:hover {
+  transform: translateY(-3px) scale(1.04);
+}
+
+.topo {
+  left: clamp(16px, 3vw, 28px);
+  width: 48px;
+  height: 48px;
+  background: var(--fundo-card);
+  border: 1px solid var(--borda-forte);
+  color: var(--texto-principal);
+  box-shadow: var(--sombra-card);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.topo.visivel {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.topo:hover {
+  border-color: var(--laranja-vivo);
+  color: var(--laranja);
+}

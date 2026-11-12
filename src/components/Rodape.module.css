@@ -1,0 +1,109 @@
+.rodape {
+  padding-top: clamp(56px, 8vw, 96px);
+  color: var(--marinho-texto-suave);
+  background: var(--fundo-rodape);
+  border-top: 1px solid var(--marinho-borda);
+  font-size: 0.9375rem;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 72px);
+}
+
+.marca img {
+  width: auto;
+  height: 44px;
+}
+
+.marca p {
+  margin-top: 22px;
+  max-width: 38ch;
+}
+
+.redes {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.redes a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--marinho-borda);
+  border-radius: 50%;
+  color: var(--marinho-texto);
+  transition: border-color var(--transicao), color var(--transicao);
+}
+
+.redes a:hover {
+  border-color: var(--marinho-acento);
+  color: var(--marinho-acento);
+}
+
+.rodape h2 {
+  font-family: var(--fonte-corpo);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--marinho-acento);
+}
+
+.grade nav ul,
+.grade > div:last-child ul {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.grade nav a,
+.grade > div:last-child a {
+  overflow-wrap: anywhere;
+  transition: color var(--transicao);
+}
+
+.grade nav a:hover,
+.grade > div:last-child a:hover {
+  color: var(--marinho-texto);
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 32px;
+  margin-top: clamp(40px, 6vw, 72px);
+  padding-block: 24px 28px;
+  border-top: 1px solid var(--marinho-borda);
+  font-size: 0.8125rem;
+}
+
+@media (max-width: 1340px) {
+  .legal {
+    padding-bottom: 96px; /* espaço para os botões flutuantes */
+  }
+}
+
+@media (max-width: 860px) {
+  .grade {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .marca {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .legal {
+    padding-bottom: 96px; /* espaço para os botões flutuantes */
+  }
+}

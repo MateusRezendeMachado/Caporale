@@ -1,0 +1,110 @@
+.metodo {
+  position: relative;
+  color: var(--marinho-texto);
+  background: var(--fundo-metodo);
+}
+
+.cabecalho {
+  max-width: 720px;
+}
+
+.sobretitulo {
+  color: var(--marinho-acento);
+}
+
+.titulo {
+  margin-top: 18px;
+  color: var(--azul);
+  font-size: clamp(2rem, 4.4vw, 3.25rem);
+}
+
+.titulo em {
+  font-style: italic;
+  color: var(--marinho-acento);
+}
+
+.texto {
+  margin-top: 20px;
+  max-width: 58ch;
+  font-size: 1.0625rem;
+  color: var(--marinho-texto-suave);
+}
+
+.etapas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: clamp(48px, 7vw, 80px);
+  border-top: 1px solid var(--marinho-borda);
+}
+
+.etapas li {
+  position: relative;
+  padding: 36px 28px 8px 0;
+}
+
+.etapas li + li {
+  padding-left: 28px;
+  border-left: 1px solid var(--marinho-borda);
+}
+
+/* Marcador sobre a linha do tempo */
+.etapas li::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--marinho-acento);
+}
+
+.etapas li + li::before {
+  left: -5px;
+}
+
+.numero {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: 2.75rem;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--marinho-acento);
+}
+
+.etapas h3 {
+  margin-top: 22px;
+  color: var(--azul);
+  font-size: 1.5rem;
+}
+
+.etapas p {
+  margin-top: 10px;
+  font-size: 0.9375rem;
+  color: var(--marinho-texto-suave);
+}
+
+@media (max-width: 960px) {
+  .etapas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 40px;
+    border-top: 0;
+  }
+
+  .etapas li,
+  .etapas li + li {
+    padding: 28px 24px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--marinho-borda);
+  }
+
+  .etapas li + li::before {
+    left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .etapas {
+    grid-template-columns: 1fr;
+  }
+}

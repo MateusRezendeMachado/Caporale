@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Caporale Advogados | Advocacia e Consultoria Jurídica em Uberlândia</title>
+    <meta
+      name="description"
+      content="Escritório multidisciplinar em Uberlândia/MG com atuação em holding e planejamento patrimonial, Direito Imobiliário, Empresarial e mediação. Atendimento presencial e online."
+    />
+    <link rel="canonical" href="https://www.caporaleadvogados.com.br/" />
+    <link rel="icon" type="image/png" href="/img/icone.png" />
+    <meta name="theme-color" content="#FFFFFF" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Caporale Advogados | Advocacia e Consultoria Jurídica" />
+    <meta
+      property="og:description"
+      content="Atuação jurídica personalizada, com análise técnica e estratégia adequada às particularidades de cada caso."
+    />
+    <meta property="og:url" content="https://www.caporaleadvogados.com.br/" />
+    <meta property="og:image" content="https://www.caporaleadvogados.com.br/img/socia.webp" />
+
+    <!-- Aplica o tema antes da primeira pintura para evitar "piscar" -->
+    <script>
+      (function () {
+        try {
+          var salvo = localStorage.getItem('caporale-tema');
+          var escuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme = salvo || (escuro ? 'dark' : 'light');
+        } catch (e) {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Caporale Advogados",
+        "legalName": "Alexandra Caporale da Silva Sociedade Individual de Advocacia",
+        "url": "https://www.caporaleadvogados.com.br/",
+        "image": "https://www.caporaleadvogados.com.br/img/socia.webp",
+        "logo": "https://www.caporaleadvogados.com.br/img/logo_caporale_advogados.png",
+        "telephone": "+55-34-3254-5913",
+        "email": "caporale.alexandra.adv@outlook.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua dos Pardais, 195 - Cidade Jardim",
+          "addressLocality": "Uberlândia",
+          "addressRegion": "MG",
+          "postalCode": "38412-108",
+          "addressCountry": "BR"
+        },
+        "areaServed": "BR",
+        "founder": {
+          "@type": "Person",
+          "name": "Alexandra Caporale",
+          "jobTitle": "Advogada",
+          "sameAs": ["https://www.linkedin.com/in/alexandra-caporale-4a0a51141/"]
+        },
+        "sameAs": [
+          "https://www.instagram.com/alexandracaporaleadvogada/",
+          "https://www.facebook.com/alexandra.caporale.7"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      Caporale Advogados — Rua dos Pardais, 195, Cidade Jardim, Uberlândia/MG. Telefone (34) 3254-5913.
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!--
+  Template de e-mail — Caporale Advogados (formulário de contato do site)
+  Cole este HTML no editor de código do template no painel do EmailJS.
+
+  Variáveis usadas: {{nome}} {{email}} {{telefone}} {{telefone_numeros}}
+                    {{assunto}} {{mensagem}} {{data}}
+
+  Configurações sugeridas do template no EmailJS:
+    Subject .... Novo contato pelo site — {{nome}}
+    To Email ... caporale.alexandra.adv@outlook.com
+    From Name .. Site Caporale Advogados
+    Reply To ... {{email}}
+-->
+<div style="margin:0;padding:0;background-color:#f1efe9;">
+  <!-- Prévia exibida na caixa de entrada -->
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">
+    {{nome}} enviou uma mensagem pelo site · {{assunto}}
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f1efe9;">
+    <tr>
+      <td align="center" style="padding:32px 12px;">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background-color:#ffffff;border:1px solid #e2dfd6;">
+
+          <!-- Cabeçalho -->
+          <tr>
+            <td style="background-color:#121e46;padding:28px 36px;border-bottom:3px solid #d9532b;">
+              <img
+                src="https://caporaleadvogados.com.br/img/logo-caporale-advogados-branco.png"
+                alt="Caporale Advogados"
+                width="174"
+                height="40"
+                style="display:block;border:0;height:40px;width:auto;"
+              />
+            </td>
+          </tr>
+
+          <!-- Título -->
+          <tr>
+            <td style="padding:36px 36px 8px 36px;font-family:Georgia,'Times New Roman',serif;">
+              <p style="margin:0 0 10px 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#b8441f;">
+                Novo contato pelo site
+              </p>
+              <h1 style="margin:0;font-size:26px;line-height:1.25;font-weight:normal;color:#141d3a;">
+                {{nome}} enviou uma mensagem
+              </h1>
+              <p style="margin:10px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#6b7287;">
+                Recebida em {{data}}
+              </p>
+            </td>
+          </tr>
+
+          <!-- Dados do contato -->
+          <tr>
+            <td style="padding:24px 36px 0 36px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;border-top:1px solid #e2dfd6;">
+                <tr>
+                  <td width="130" style="padding:14px 0;border-bottom:1px solid #e2dfd6;font-size:11px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#6b7287;vertical-align:top;">
+                    Nome
+                  </td>
+                  <td style="padding:14px 0;border-bottom:1px solid #e2dfd6;font-size:15px;color:#141d3a;">
+                    {{nome}}
+                  </td>
+                </tr>
+                <tr>
+                  <td width="130" style="padding:14px 0;border-bottom:1px solid #e2dfd6;font-size:11px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#6b7287;vertical-align:top;">
+                    E-mail
+                  </td>
+                  <td style="padding:14px 0;border-bottom:1px solid #e2dfd6;font-size:15px;">
+                    <a href="mailto:{{email}}" style="color:#b8441f;text-decoration:none;">{{email}}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="130" style="padding:14px 0;border-bottom:1px solid #e2dfd6;font-size:11px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#6b7287;vertical-align:top;">
+                    Telefone
+                  </td>
+                  <td style="padding:14px 0;border-bottom:1px solid #e2dfd6;font-size:15px;color:#141d3a;">
+                    {{telefone}}
+                  </td>
+                </tr>
+                <tr>
+                  <td width="130" style="padding:14px 0;border-bottom:1px solid #e2dfd6;font-size:11px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#6b7287;vertical-align:top;">
+                    Assunto
+                  </td>
+                  <td style="padding:14px 0;border-bottom:1px solid #e2dfd6;font-size:15px;color:#141d3a;">
+                    {{assunto}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Mensagem -->
+          <tr>
+            <td style="padding:28px 36px 0 36px;font-family:Arial,Helvetica,sans-serif;">
+              <p style="margin:0 0 12px 0;font-size:11px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#6b7287;">
+                Mensagem
+              </p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="padding:20px 22px;background-color:#f7f5f0;border-left:3px solid #d9532b;font-size:15px;line-height:1.65;color:#141d3a;white-space:pre-line;">{{mensagem}}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Ações -->
+          <tr>
+            <td style="padding:32px 36px 40px 36px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="background-color:#c2481f;border-radius:999px;">
+                    <a href="mailto:{{email}}?subject=Caporale%20Advogados%20%E2%80%94%20retorno%20do%20seu%20contato" style="display:inline-block;padding:14px 26px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:bold;color:#ffffff;text-decoration:none;">
+                      Responder por e-mail
+                    </a>
+                  </td>
+                  <td width="12" style="font-size:0;line-height:0;">&nbsp;</td>
+                  <td style="border:1px solid #121e46;border-radius:999px;">
+                    <a href="https://wa.me/{{telefone_numeros}}" style="display:inline-block;padding:13px 26px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:bold;color:#121e46;text-decoration:none;">
+                      Chamar no WhatsApp
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Rodapé -->
+          <tr>
+            <td style="padding:22px 36px;background-color:#f7f5f0;border-top:1px solid #e2dfd6;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.6;color:#6b7287;">
+              Mensagem enviada pelo formulário de contato do site caporaleadvogados.com.br.<br />
+              Ao responder este e-mail, a resposta vai diretamente para {{email}}.
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,197 @@
+.hero {
+  position: relative;
+  padding-top: calc(var(--altura-header) + clamp(40px, 7vw, 88px));
+  color: var(--marinho-texto);
+  background: var(--fundo-hero);
+  overflow: hidden;
+}
+
+/* Linhas verticais finas, de inspiração editorial */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, var(--linha-hero) 1px, transparent 1px);
+  background-size: calc(100% / 6) 100%;
+  pointer-events: none;
+}
+
+.grade {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 88px);
+}
+
+.sobretitulo {
+  color: var(--marinho-acento);
+}
+
+.titulo {
+  margin-top: 26px;
+  color: var(--azul);
+  font-size: clamp(2.25rem, 4.3vw, 3.75rem);
+  font-weight: 350;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+}
+
+.titulo em {
+  font-style: italic;
+  color: var(--marinho-acento);
+}
+
+.subtitulo {
+  margin-top: 28px;
+  max-width: 52ch;
+  font-size: clamp(1.0625rem, 1.5vw, 1.1875rem);
+  color: var(--marinho-texto-suave);
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.botaoClaro {
+  color: var(--marinho-texto);
+  border-color: var(--borda-forte);
+}
+
+.botaoClaro:hover {
+  color: var(--marinho-acento);
+  border-color: var(--marinho-acento);
+}
+
+.retrato {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: 420px;
+}
+
+.moldura {
+  position: relative;
+}
+
+.moldura::before {
+  content: '';
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border: 1px solid var(--marinho-acento);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.moldura img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 22%;
+}
+
+.legenda {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  margin: -44px 0 0 -28px;
+  padding: 20px 24px;
+  max-width: 320px;
+  background: var(--legenda-fundo);
+  color: var(--legenda-texto);
+  box-shadow: var(--sombra-card);
+  border-left: 3px solid #d9532b;
+}
+
+.citacao {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: 1.1875rem;
+  line-height: 1.3;
+}
+
+.assinatura {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--legenda-suave);
+}
+
+.fatos {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: clamp(56px, 8vw, 96px);
+  border-top: 1px solid var(--marinho-borda);
+}
+
+.fatos li {
+  padding: 26px 24px 30px 0;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+  line-height: 1.3;
+}
+
+.fatos li + li {
+  padding-left: 24px;
+  border-left: 1px solid var(--marinho-borda);
+}
+
+.fatos span {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--fonte-corpo);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--marinho-texto-suave);
+}
+
+@media (max-width: 900px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .retrato {
+    justify-self: start;
+    max-width: 380px;
+  }
+
+  .legenda {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .botoes {
+    flex-direction: column;
+  }
+
+  .moldura::before {
+    inset: 12px -10px -12px 12px;
+  }
+
+  .legenda {
+    margin: -36px 0 0 16px;
+  }
+
+  .fatos {
+    grid-template-columns: 1fr;
+  }
+
+  .fatos li,
+  .fatos li + li {
+    padding: 20px 0;
+    border-left: 0;
+  }
+
+  .fatos li + li {
+    border-top: 1px solid var(--marinho-borda);
+  }
+}
