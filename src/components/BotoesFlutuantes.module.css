@@ -12,6 +12,7 @@
 
 .whatsapp {
   right: clamp(16px, 3vw, 28px);
+  bottom: 76px; /* acima do selo "Powered by Netlify", que ocupa o canto inferior direito */
   width: 58px;
   height: 58px;
   background: #1faa53;
