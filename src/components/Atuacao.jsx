@@ -38,7 +38,7 @@ export default function Atuacao() {
           <div>
             <p className="sobretitulo">Áreas de atuação</p>
             <h2 className="tituloSection">
-              Um escritório multidisciplinar, com <em>dois focos</em> de destaque.
+              Um escritório multidisciplinar, com <em>focos</em> de destaque.
             </h2>
           </div>
           <p className="textoSection">
